@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #4285F4;
+  --secondary-color: #EA4335;
+  --text-color: #333333;
+  --background-color: #f5f5f5;
+  --border-color: #cccccc;
+  --button-hover-color: #ff887e;
+}
+
+* {
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.form-main {
+  min-height: 100vh;
+  padding: 60px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-content .box {
+  border: 1px solid var(--border-color);
+  padding: 50px 50px;
+  border-radius: 20px;
+}
+
+.form-content h3 {
+  font-size: 26px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.form-content form {
+  margin: 35px 0 20px;
+}
+
+.form-content .input-box {
+  margin-bottom: 25px;
+}
+
+.form-content .input-control {
+  display: block;
+  height: 45px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: 17px;
+}
+
+.form-content .input-control:focus {
+  outline: none;
+}
+
+.form-content .btn {
+  height: 55px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 25px;
+  user-select: none;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border: none;
+  color: var(--text-color);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.form-content .btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: -1;
+}
+
+.form-content .btn:hover::before {
+  background-color: var(--button-hover-color);
+}
+
+.form-content .circle-1,
+.form-content .circle-2,
+.form-content .circle-3 {
+  position: absolute;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.form-content .circle-1 {
+  height: 120px;
+  width: 120px;
+  left: 10%;
+  top: 10%;
+  transform: translateX(50%);
+}
+
+.form-content .circle-2 {
+  height: 80px;
+  width: 80px;
+  right: 10%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.form-content .circle-3 {
+  height: 50px;
+  width: 50px;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
